@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Introduction to Web Programming Project - CPSC 1045</title>
+        <link type="text/css" href="project2.css" rel="stylesheet">
+        <script type="text/javascript" src="searching.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h2>
+                Introduction to Web Programming Project - CPSC 1045
+            </h2>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" title="Home">Home</a>
+                </li>
+                <li>
+                    <a href="bases.html" title="Conversion Between Bases">Conversion Between Bases</a>
+                </li>
+                <li>
+                    <a href="sandq.html" title="Stacks and Queues">Stacks and Queues</a>
+                </li>
+                <li>
+                    <a class="active" href="search.html" title="Searching">Searching</a>
+                </li>
+                <li>
+                    <a href="disk.html" title="Home">Disk Scheduling</a>
+                </li>
+                <li>
+                    <a href="process.html" title="Process Scheduling">Process Scheduling</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h3>Searching in an Ordered List</h3>
+                <p>
+                    Discover the difference between sequential and binary search.
+                </p>
+            </section>
+            <div class="wrapper">
+                <aside>
+                    <fieldset>
+                        <legend>Choose one:</legend>
+                        <input type="radio" name="algorithm" value="sequential" id="sequential" onchange="changeAlgorithm()" checked> <label for="sequential"> Sequential</label><br>
+                        <input type="radio" name="algorithm" value="binary" id="binary" onchange="changeAlgorithm()"> <label for="binary"> Binary</label><br>
+                    </fieldset>
+                    <ul>
+                        <li>
+                            <label for="searchItem">Search item:</label> <input type="text" name="searchItem" id="searchItem" onkeydown="myKeyPress(event)">
+                        </li>
+                        <li>
+                            <button id="btnSearch" type="button" name="btnSearch" onclick="callSearch()">Search</button>
+                        </li>
+                        <li>
+                            <select id="exampleSelect" onchange="loadExample(this.value);">
+                                <option value="0">Select an Example</option>
+                                <option value="99">Ex. 1: something in the list (sequential)</option>
+                                <option value="20">Ex. 2: something not in the list (sequential)</option>
+                                <option value="19">Ex. 3: something in the list (binary)</option>
+                                <option value="3789">Ex. 4: something not in the list (binary)</option>
+                            </select>
+                        </li>
+                    </ul>
+                </aside>
+                <div id="interactionDiv" class="searchFlexContainer">
+                    <div id="rightInput" class="baseInput">
+                        <ol id="search" start="0">
+                        </ol>
+                    </div>
+                    <div id="arrayView" class="arrayViewSearch">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>
+                Reference: this website is based on the Applets Website at <a href="http://faculty.mc3.edu/pvetere/Applets/">http://faculty.mc3.edu/pvetere/Applets/</a> from Montgomery County Community College, which is based on the book: Explorations in Computer Science, Second Edition, by R. Mark Meyer.
+            </p>
+        </footer>
+    </body>
+</html>

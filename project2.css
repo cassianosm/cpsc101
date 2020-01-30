@@ -1,0 +1,455 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main p, label, select, #resultsDiv li {
+    color: #2B3409;
+    font-size: 14px;
+}
+
+header, nav, footer {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+footer {
+    background-color: #2B3409;
+    color: #F4F9E1;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 4px;
+    clear: both;
+}
+
+footer a {
+    text-decoration: none;
+    color: #F4F9E1;
+}
+
+header {
+    height: 50px;
+    background-color: #B2D732;
+    color: #2B3409;
+}
+
+header h2 {
+    padding-top: 12px;
+}
+
+nav > ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #F4F9E1;
+}
+
+nav > ul > li {
+    display: inline;
+    float: left;
+}
+
+nav > ul > li a {
+    display: block;
+    color: #2B3409;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav > ul > li a:hover {
+    background-color: #D3E788;
+}
+
+.active {
+    background-color: #D3E788;
+}
+
+main {
+    width: 980px;
+    margin: auto;
+    min-height: 500px;
+    padding: 10px;
+}
+
+main h3, main p {
+    margin: 10px;
+}
+
+section {
+    width: 980px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+aside {
+    flex: 0 0 250px;
+    padding: 5px;
+}
+
+fieldset {
+    padding: 5px;
+    border: 1px solid #2B3409;
+}
+
+fieldset input {
+    margin: 5px;
+}
+
+#interactionDiv {
+    flex: 1 0 730px;
+    padding: 5px;
+}
+
+.baseInput > ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.baseInput > ul > li {
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+
+.baseInput, .arrayView {
+    margin: auto;
+}
+
+#baseTenInput {
+    width: 150px;
+}
+
+#baseXInput {
+    width: 150px;
+}
+
+.arrayView {
+    padding-left: 20px;
+    text-align: left;
+    width: 680px;
+    word-wrap: break-word;
+}
+
+button {
+    background-color: #66B032;
+    color: #EBF7E3;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #EBF7E3;
+    color: #1B3409;
+    cursor: pointer;
+}
+
+button:focus,
+button:active {
+    outline: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+aside > ul > li {
+    display: block;
+    color: #2B3409;
+    text-align: center;
+    padding: 7px 16px;
+    text-decoration: none;
+}
+
+aside > ul {
+    margin-top: 7px;
+}
+
+#btnBaseX {
+    margin-bottom: 5px;
+}
+
+#arrayView ol {
+    padding-left: 40px;
+}
+
+#arrayView ol li {
+    padding: 2px;
+}
+
+#arrayView ol li:nth-child(odd) {
+    background-color: #F4F9E1;
+}
+
+#arrayView ul li {
+    padding: 2px;
+}
+
+#arrayView ul, #arrayView ol {
+    margin-top: 10px;
+}
+
+.diskFlexContainer {
+    display: flex;
+    text-align: center;
+}
+
+.searchFlexContainer {
+    text-align: center;
+}
+
+.diskFlexColum1 {
+    flex: 1 0 50%;
+}
+
+.diskFlexColum1 ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.diskFlexColum1 ul li {
+    padding: 10px;
+}
+
+.diskArrayView {
+    word-wrap: break-word;
+    flex: 1 0 40%;
+    text-align: left;
+}
+
+#exampleSelect {
+    width: 200px;
+}
+
+.current {
+  background-color: #66B032;
+}
+
+.not-it {
+  background-color: #D3E788;
+}
+
+#search {
+    width: 100px;
+    display: inline-block;
+}
+
+.arrayViewSearch {
+    text-align: center;
+    width: 680px;
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+
+/* Stacks and Queues */
+
+.stackArrayView {
+    word-wrap: break-word;
+    flex: 0 0 50%;
+    text-align: left;
+}
+
+.stackFlexColum1 {
+    flex: 0 0 50%;
+}
+
+.stackFlexColum1 ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.stackFlexColum1 ul li {
+    padding: 10px;
+}
+
+.stackFlexColum1 ul li:last-child {
+    padding-top: 130px;
+}
+
+.arrayItems {
+    font-size: 1.1em;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+#screen {
+    width: 280px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.showAsQueue {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.showAsStack {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.showAsMystery {
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+#labels {
+    flex-direction: column;
+}
+
+#labels > div {
+    padding-left: 5px;
+}
+
+#labels > div:nth-child(2) {
+    margin-top: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#objectDiv {
+    height: 350px;
+    min-width: 120px;
+}
+
+#arrayDisplay > li {
+    margin: 7px;
+    padding: 0 20px 0 20px;
+}
+
+#arrayDisplay {
+    text-align: center;
+}
+
+.stackFlexContainer {
+    display: flex;
+    text-align: left;
+}
+
+#addInput {
+    width: 50px;
+    height: 35px;
+}
+
+#itemRemoved {
+    text-align: center;
+    padding: 9px;
+}
+
+/* Process */
+
+.processFlexColum1 {
+    flex: 0 0 50%;
+    text-align: center;
+}
+
+.processFlexColum1 ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.processFlexColum1 ul li {
+    padding: 10px;
+}
+
+.processArrayView {
+    word-wrap: break-word;
+    flex: 1 0 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#processView {
+    display: table;
+    text-align: center;
+    margin: auto;
+}
+
+#processView ul li {
+    display: table-row;
+}
+
+#processView ul li span {
+    display: table-cell;
+    padding: 5px;
+    border: 1px solid;
+}
+
+#processList {
+    border-collapse: collapse;
+    margin-top: 0;
+    height: 180px;
+}
+
+#resultsDiv {
+    width: 100%;
+}
+
+#resultsDiv ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+#resultsDiv ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+#totalTimeSpent {
+    width: 90px;
+}
+
+#quatumSpent {
+    width: 170px;
+}
+
+#turnaroundTimeHtml {
+    width: 520px;
+}
+
+#gantt {
+    margin-top: 50px;
+}
+
+#pr0 span {
+    background-color: #1E90FF;
+}
+
+#pr1 {
+    background-color: #FA8072;
+}
+
+#pr2 {
+    background-color: #DEB887;
+}
+
+#pr3 {
+    background-color: #2E8B57;
+}
+
+#pr4 {
+    background-color: #008B8B;
+}
+
+#pr5 {
+    background-color: #20B2AA;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Introduction to Web Programming Project - CPSC 1045</title>
+        <link type="text/css" href="project2.css" rel="stylesheet">
+        <script type="text/javascript" src="processscheduling.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h2>
+                Introduction to Web Programming Project - CPSC 1045
+            </h2>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" title="Home">Home</a>
+                </li>
+                <li>
+                    <a href="bases.html" title="Conversion Between Bases">Conversion Between Bases</a>
+                </li>
+                <li>
+                    <a href="sandq.html" title="Stacks and Queues">Stacks and Queues</a>
+                </li>
+                <li>
+                    <a href="search.html" title="Searching">Searching</a>
+                </li>
+                <li>
+                    <a href="disk.html" title="Home">Disk Scheduling</a>
+                </li>
+                <li>
+                    <a class="active" href="process.html" title="Process Scheduling">Process Scheduling</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h3>Process Scheduling</h3>
+                <p>
+                    Check how different algorithms can change the average turnaround time.
+                </p>
+            </section>
+            <div class="wrapper">
+                <aside>
+                    <fieldset>
+                        <legend>Choose one:</legend>
+                        <input type="radio" name="algorithm" value="fcfs" id="fcfs" onclick="changeAlgorithm(this.value)" checked> <label for="fcfs"> First-Come First-Serverd</label><br>
+                        <input type="radio" name="algorithm" value="sjf" id="sjf" onclick="changeAlgorithm(this.value)"> <label for="sjf"> Shortest Jobs First</label><br>
+                        <input type="radio" name="algorithm" value="roundRobin" id="roundRobin" onclick="changeAlgorithm(this.value)"> <label for="roundRobin"> Round Robin</label><br>
+                    </fieldset>
+                    <ul>
+                        <li>
+                            <label for="exampleSelect">Choose Example:</label><br>
+                            <select id="exampleSelect" onchange="loadExample(this.value);">
+                                <option value="1">Example 1</option>
+                                <option value="2">Example 2</option>
+                                <option value="3">Example 3</option>
+                                <option value="4">Example 4</option>
+                            </select>
+                        </li>
+<!--                        <li>
+                            Process List:<br><textarea disabled id="arrayInput" rows="5" cols="10"></textarea>
+                        </li>-->
+                    </ul>
+                </aside>
+                <div id="interactionDiv" class="stackFlexContainer">
+                    <div id="rightInput" class="processFlexColum1">
+                        <ul>
+                            <li>
+                                <label for="quantumInput">Quantum Size:</label><br><input type="text" value="50" name="quatum" id="quantumInput" onblur="changeQuantum(this.value);">
+                            </li>
+                            <li>
+                                <button id="btnStart" type="button" name="btnStart" onclick="callStartAnimation()">Run</button>
+                            </li>
+                            <li>
+                                <button id="btnStop" type="button" name="btnStop" onclick="stopAnimation()">Stop</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="arrayView" class="processArrayView">
+                        <div id="processView">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gantt">
+                <div id="resultsDiv">
+                    <ul>
+                      <li id="totalTimeSpent">Total: </li>
+                      <li id="quatumSpent">Left in Quantum: </li>
+                      <li id="turnaroundTimeHtml">Average Turnaround Time: </li>
+                    </ul>
+                </div>
+                <canvas id="myCanvas" width="960" height="100" style="border:1px solid #000000;"></canvas>
+            </div>
+        </main>
+        <footer>
+            <p>
+                Reference: this website is based on the Applets Website at <a href="http://faculty.mc3.edu/pvetere/Applets/">http://faculty.mc3.edu/pvetere/Applets/</a> from Montgomery County Community College, which is based on the book: Explorations in Computer Science, Second Edition, by R. Mark Meyer.
+            </p>
+        </footer>
+    </body>
+</html>

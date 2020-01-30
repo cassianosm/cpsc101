@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Introduction to Web Programming Project - CPSC 1045</title>
+        <link type="text/css" href="project2.css" rel="stylesheet">
+        <script type="text/javascript" src="conversionbetweenbases.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h2>
+                Introduction to Web Programming Project - CPSC 1045
+            </h2>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" title="Home">Home</a>
+                </li>
+                <li>
+                    <a class="active" href="bases.html" title="Conversion Between Bases">Conversion Between Bases</a>
+                </li>
+                <li>
+                    <a href="sandq.html" title="Stacks and Queues">Stacks and Queues</a>
+                </li>
+                <li>
+                    <a href="search.html" title="Searching">Searching</a>
+                </li>
+                <li>
+                    <a href="disk.html" title="Home">Disk Scheduling</a>
+                </li>
+                <li>
+                    <a href="process.html" title="Process Scheduling">Process Scheduling</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h3>Conversion Between Bases</h3>
+                <p>
+                    Convert any positive base 10 integer to one of the following bases and vice-versa.
+                </p>
+            </section>
+            <div class="wrapper">
+                <aside>
+                    <fieldset>
+                        <legend>Choose one:</legend>
+                        <input type="radio" name="base" value="2" id="base2" onclick="changeBase()" checked><label for="base2"> Binary</label><br>
+                        <input type="radio" name="base" value="3" id="base3" onclick="changeBase()"><label for="base3"> Ternary</label><br>
+                        <input type="radio" name="base" value="5" id="base5" onclick="changeBase()"><label for="base5"> Base 5</label><br>
+                        <input type="radio" name="base" value="8" id="base8" onclick="changeBase()"><label for="base8"> Octal</label><br>
+                        <input type="radio" name="base" value="16" id="base16" onclick="changeBase()"><label for="base16"> Hexadecimal (Base 16)</label><br>
+                    </fieldset>
+                    <ul>
+                        <li>
+                            <button id="clear" type="button" name="clear" onclick="callClearValues()">Clear</button>
+                        </li>
+                    </ul>
+                </aside>
+                <div id="interactionDiv">
+                    <div id="rightInput" class="baseInput">
+                        <ul>
+                            <li>
+                                <label for="baseTenInput">Base 10:</label> <input type="text" name="baseTenInput" id="baseTenInput" onkeydown="myKeyPress(event, 'ten')">
+                            </li>
+                            <li>
+                                <button id="btnBaseX" type="button" name="btnBaseX" onclick="callFromBaseTenToBaseX()"></button><br><button id="btnBaseTen" type="button" name="btnBaseTen" onclick="callFromBaseXToBaseTen()">&larr; Convert to Base 10</button>
+                            </li>
+                            <li>
+                                <label id="baseXLabel" for="baseXInput">Base 10:</label> <input type="text" name="baseXInput" id="baseXInput" onkeydown="myKeyPress(event, 'x')">
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="arrayView" class="arrayView">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>
+                Reference: this website is based on the Applets Website at <a href="http://faculty.mc3.edu/pvetere/Applets/">http://faculty.mc3.edu/pvetere/Applets/</a> from Montgomery County Community College, which is based on the book: Explorations in Computer Science, Second Edition, by R. Mark Meyer.
+            </p>
+        </footer>
+    </body>
+</html>
